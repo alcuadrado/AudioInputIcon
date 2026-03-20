@@ -10,6 +10,13 @@ If you have multiple audio input devices (e.g. your MacBook's built-in mic, AirP
 
 Download the latest release from the [Releases](https://github.com/alcuadrado/AudioInputIcon/releases) page, decompress the `.tgz` file, and move `AudioInputIcon.app` to your `/Applications` folder.
 
+## Features
+
+- Zero runtime dependencies — only uses native macOS APIs
+- Updates in real-time via CoreAudio property listener
+- Optional "Start at Login" via SMAppService
+- No microphone access required — only reads device metadata
+
 ## Icon mapping
 
 | Device               | Match method                                                                   | Icon               |
@@ -27,13 +34,6 @@ Download the latest release from the [Releases](https://github.com/alcuadrado/Au
 | Virtual device       | Virtual transport type                                                         | `mic.badge.xmark`  |
 | No device            | No input device available                                                      | `mic.slash`        |
 | Unknown              | Fallback                                                                       | `mic`              |
-
-## Features
-
-- Zero runtime dependencies — only uses native macOS APIs
-- Updates in real-time via CoreAudio property listener
-- Optional "Start at Login" via SMAppService
-- No microphone access required — only reads device metadata
 
 ---
 
