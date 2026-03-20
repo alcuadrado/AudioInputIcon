@@ -50,8 +50,6 @@ The `xattr` command removes the macOS quarantine flag that would otherwise block
 
 AudioInputIcon is written in Zig and cross-compiled from Linux targeting `aarch64-macos`, so that you don't need to install any toolchain on your host, apart from the [Command Line Tools](https://developer.apple.com/documentation/xcode/command-line-tools).
 
-> You can get away without installing the Command Line Tools if you copy a macOS SDK from another machine.
-
 ### Prerequisites
 
 - **Linux**: [Zig 0.13.x](https://ziglang.org/download/)
