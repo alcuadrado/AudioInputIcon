@@ -8,7 +8,16 @@ If you have multiple audio input devices (e.g. your MacBook's built-in mic, AirP
 
 ## Installation
 
-Download the latest release from the [Releases](https://github.com/alcuadrado/AudioInputIcon/releases) page, decompress the `.tgz` file, and move `AudioInputIcon.app` to your `/Applications` folder.
+Download the latest release from the [Releases](https://github.com/alcuadrado/AudioInputIcon/releases) page, then run:
+
+```bash
+cd ~/Downloads
+tar xzf AudioInputIcon.tgz
+xattr -cr AudioInputIcon.app
+mv AudioInputIcon.app /Applications/
+```
+
+The `xattr` command removes the macOS quarantine flag that would otherwise block the app from running, since it is not notarized.
 
 ## Features
 
