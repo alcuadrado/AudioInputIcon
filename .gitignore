@@ -1,0 +1,7 @@
+zig-out/
+.zig-cache/
+AudioInputIcon.app/
+.claude/
+
+# Ignored for licensing concerns, lookt at the README to learn how to generate it.
+/bundle/AppIcon.icns
