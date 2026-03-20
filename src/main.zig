@@ -22,6 +22,10 @@ pub fn main() void {
     log.print("AudioInputIcon: setting activation policy\n", .{});
     objc.msgSend(void, NSApp, "setActivationPolicy:", .{objc.NSApplicationActivationPolicyAccessory});
 
+    // Reduce tooltip delay so the device name appears quickly on hover (default is ~1500ms).
+    const defaults = objc.msgSend(objc.id, objc.getClass("NSUserDefaults"), "standardUserDefaults", .{});
+    objc.msgSend(void, defaults, "setInteger:forKey:", .{ @as(objc.NSInteger, 500), objc.nsString("NSInitialToolTipDelay") });
+
     log.print("AudioInputIcon: registering delegate class\n", .{});
     const DelegateClass = registerDelegateClass();
 
