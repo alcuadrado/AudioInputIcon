@@ -30,7 +30,7 @@ Download the latest release from the [Releases](https://github.com/alcuadrado/Au
 
 ## Features
 
-- Zero runtime dependencies — single static binary
+- Zero runtime dependencies — only uses native macOS APIs
 - Updates in real-time via CoreAudio property listener
 - Optional "Start at Login" via SMAppService
 - No microphone access required — only reads device metadata
