@@ -6,6 +6,10 @@ A tiny macOS menu bar app that shows which audio input device is currently activ
 
 If you have multiple audio input devices (e.g. your MacBook's built-in mic, AirPods, USB mic, etc), it's easy to lose track of which one is currently active, especially when they get connected/disconnected frequently. This app gives you a quick visual indicator in the menu bar, so you can be sure you're using the right mic.
 
+## Installation
+
+Download the latest release from the [Releases](https://github.com/alcuadrado/AudioInputIcon/releases) page, decompress the `.tgz` file, and move `AudioInputIcon.app` to your `/Applications` folder.
+
 ## Icon mapping
 
 | Device               | Match method                                                                   | Icon               |
