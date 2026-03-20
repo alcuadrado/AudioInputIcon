@@ -56,7 +56,7 @@ AudioInputIcon is written in Zig and cross-compiled from Linux targeting `aarch6
 
 ### Build process
 
-The build process consists of three steps:
+The build process consists of four steps:
 
 #### Compile on Linux with the macOS SDK
 
@@ -84,7 +84,19 @@ Once the icon is generated, and available as `bundle/AppIcon.icns`, you can crea
 ./scripts/bundle.sh
 ```
 
-This will create `AudioInputIcon.app`, which you can copy to `/Applications` on your Mac.
+This will create `AudioInputIcon.app`, which you should move to your Mac for the next step.
+
+#### Sign and package on macOS
+
+Downloaded macOS apps are flagged by Gatekeeper as "damaged" unless they are code-signed.
+
+Copy the `AudioInputIcon.app` and `./scripts/sign-and-package.sh` to your Mac. Then run the following on your Mac to ad-hoc sign the app and create a `.tgz` for distribution:
+
+```bash
+./scripts/sign-and-package.sh
+```
+
+This ad-hoc signs the bundle and produces `AudioInputIcon.tgz`. Users will still need to right-click > Open the first time to bypass the "unidentified developer" warning.
 
 #### Troubleshooting
 
